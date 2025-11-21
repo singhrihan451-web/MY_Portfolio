@@ -1,0 +1,203 @@
+/* 🌟 Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #7791bf ;
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: #2e2e2e;
+  line-height: 1.6;
+  transition: background 0.6s ease, color 0.3s ease;
+}
+
+/* 🎞 Background animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* 🌈 Header Section */
+header {
+  background: linear-gradient(120deg, #667eea, #2a0e47);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 6px 30px rgba(118, 75, 162, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle floating gradient animation */
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+  animation: floatGlow 10s linear infinite;
+}
+
+@keyframes floatGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-top: 40px;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 5s ease infinite;
+}
+
+@keyframes shineText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header h1 span {
+  color: #ffeb3b;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 12px;
+  color: #f1f1f1;
+}
+
+/* 🌐 Navigation */
+nav {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  padding: 15px 50px;
+  gap: 40px;
+  margin-top: -60px;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -4px;
+  background: linear-gradient(90deg, #43cea2, #185a9d);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+nav a:hover {
+  color: #43cea2;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* 💫 Intro Section */
+.intro-section {
+  background: linear-gradient(145deg, #ffffff, #f7faff);
+  padding: 60px;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(100, 100, 255, 0.15);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.intro-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(100, 100, 255, 0.25);
+}
+
+.intro-section h2 {
+  color: #0066cc;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 102, 204, 0.2);
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ⚡ Footer */
+footer {
+  background: linear-gradient(90deg, #232526, #414345);
+  color: #3a9ad2;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 70px;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  animation: footerGlow 4s linear infinite;
+}
+
+@keyframes footerGlow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* 🌗 Dark Mode */
+body.dark-mode {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: linear-gradient(120deg, #141e30, #243b55);
+}
+
+body.dark-mode .intro-section {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  box-shadow: 0 6px 20px rgba(0, 230, 230, 0.1);
+}
+
+body.dark-mode footer {
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Savita - Portfolio</title>
+  <style>
+    /* 🌟 Modern Portfolio Styling */
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  color: #2c3e50;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ====== ABOUT SECTION ====== */
+#about {
+  background: linear-gradient(135deg, hsl(229, 27%, 51%), #d0668700);
+  padding: 80px 20px;
+  position: relative;
+}
+
+/* 🎇 Soft gradient circles as background decorations */
+#about::before,
+#about::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+#about::before {
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 119, 204, 0.2);
+  top: 20%;
+  left: 10%;
+}
+
+#about::after {
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 99, 132, 0.25);
+  bottom: 15%;
+  right: 10%;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 👤 Profile Image Styling */
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+.about-image img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.25);
+  border: 6px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.about-image img:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0px 18px 40px rgba(0, 119, 204, 0.3);
+}
+
+/* 📝 About Text Styling */
+.about-text {
+  flex: 2;
+  color: #1a1a1a;
+  font-size: 1.05rem;
+}
+
+.about-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #0077cc;
+  border-left: 6px solid #0077cc;
+  padding-left: 15px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 119, 204, 0.2);
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+/* 💎 Skills Grid Styling */
+.about-skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.about-skills span {
+  background: linear-gradient(135deg, #0077cc, #4a90e2);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 8px rgba(0, 119, 204, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-skills span:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 12px rgba(0, 119, 204, 0.4);
+}
+
+/* 📄 Button Styling */
+.about-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #0077cc, #005fa3);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  box-shadow: 0px 4px 10px rgba(0, 119, 204, 0.3);
+}
+.about-btn:hover {
+  background: linear-gradient(135deg, #005fa3, #003f7f);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 95, 163, 0.5);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    border-left: none;
+    border-bottom: 4px solid #0077cc;
+    display: inline-block;
+    padding-bottom: 6px;
+  }
+
+  .about-skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+  </style>
+</head>
+<body >
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="vishal.JPG" alt="vishal Savita">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hi, I'm <strong>vishal Savita</strong> 👋</p>
+        <p>Eager to apply my skills and learnings to real-world projects, I’m passionate about building dynamic web applications. Skilled in React, Python, and JavaScript, with a strong foundation in data structures, algorithms, and software engineering.</p>
+        <p>Here are some of my core technical skills:</p>
+
+        <div class="about-skills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          <span>React</span><span>Python</span><span>C++</span>
+          <span>MySQL</span><span>Oracle</span><span>MongoDB</span><span>Java</span>
+          <span>Node.js</span><span>DBMS</span>
+        </div>
+
+        <p><strong>Achievements:</strong> Solved 50+ HackerRank Problems 💻</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
