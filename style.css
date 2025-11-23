@@ -202,21 +202,3 @@ body.dark-mode footer {
   background: linear-gradient(90deg, #0f172a, #1e293b);
 }
 
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  nav{
-    display: none;
-    flex-direction: column;
-    background: #222;
-    padding: 20px;
-  }
-  .menu-icon {
-    display: block;
-  }
-}
